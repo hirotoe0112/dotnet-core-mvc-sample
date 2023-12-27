@@ -12,11 +12,15 @@ namespace BulkyWeb.Controllers
         }
 
         // GET: CategoryController
-        public ActionResult Index()
+        public IActionResult Index()
         {
             var categories = _db.Categories.ToList();
             return View(categories);
         }
 
+        public IActionResult Create()
+        {
+            return View();
+        }
     }
 }
