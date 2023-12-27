@@ -12,12 +12,7 @@
       </a>
     </div>
   </div>
-  @if (TempData["success"] != null)
-  {
-    <div class="row" class="text-primary">
-      @TempData["success"]
-    </div>
-  }
+  <partial name="_Notification" />
   <table class="table table-bordered table-striped">
     <thead>
       <tr>
@@ -28,13 +23,11 @@
           Display Order
         </th>
         <th>
-
         </th>
       </tr>
     </thead>
     <tbody>
       @foreach (var category in Model.OrderBy(x => x.DisplayOrder))
-
       {
         <tr>
           <td>
