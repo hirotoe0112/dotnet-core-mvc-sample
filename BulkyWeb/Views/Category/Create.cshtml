@@ -10,7 +10,7 @@
         </div>
         <!--AllではなくModelOnlyにするとモデルのプロパティに紐づいたエラーのみが表示される
             Noneにすると何も表示されない -->
-        @*<div asp-validation-summary="None"></div>*@
+        <!--<div asp-validation-summary="None"></div>-->
         <div class="mb-3 row p-1">
             <label asp-for="Name" class="p-0"></label>
             <input asp-for="Name" class="form-control">
@@ -35,3 +35,9 @@
         </div>
     </div>
 </form>
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
