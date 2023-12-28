@@ -13,7 +13,7 @@ namespace Bulky.DataAccess.Repository
     public Repository(ApplicationDbContext db)
     {
       _db = db;
-      this.dbSet = _db.Set<T>();
+      dbSet = _db.Set<T>();
       // _db.Categories = dbSet;という意味
     }
 
@@ -23,7 +23,7 @@ namespace Bulky.DataAccess.Repository
       return query.ToList();
     }
 
-    public T Get(Expression<Func<T, bool>> filter)
+    public T? Get(Expression<Func<T, bool>> filter)
     {
       IQueryable<T> query = dbSet;
       return query.Where(filter).FirstOrDefault();
