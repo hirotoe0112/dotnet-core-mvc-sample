@@ -47,7 +47,9 @@
         "add",
         "${input:migration}",
         "--project",
-        "${input:project}"
+        "Bulky.DataAccess",
+        "--startup-project",
+        "${workspaceFolder}/BulkyWeb"
       ],
       "problemMatcher": "$msCompile"
     },
@@ -60,7 +62,9 @@
         "database",
         "update",
         "--project",
-        "${input:project}"
+        "Bulky.DataAccess",
+        "--startup-project",
+        "${workspaceFolder}/BulkyWeb"
       ],
       "problemMatcher": "$msCompile"
     }
@@ -77,6 +81,9 @@
       "type": "pickString",
       "options": [
         "BulkyWeb",
+        "Bulky.DataAccess",
+        "Bulky.Models",
+        "Bulky.Utility",
         "BulkyWebRazor_Temp"
       ]
     }
