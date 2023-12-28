@@ -36,6 +36,45 @@
         "${workspaceFolder}/Bulky.sln"
       ],
       "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "add migration",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "ef",
+        "migrations",
+        "add",
+        "${input:migration}",
+        "--project",
+        "${input:project}"
+      ],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "update database",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "ef",
+        "database",
+        "update",
+        "--project",
+        "${input:project}"
+      ],
+      "problemMatcher": "$msCompile"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "migration",
+      "description": "Enter migration name",
+      "type": "promptString"
+    },
+    {
+      "id": "project",
+      "description": "Enter project name",
+      "type": "promptString"
     }
   ]
 }
