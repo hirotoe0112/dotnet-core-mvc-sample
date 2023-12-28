@@ -69,12 +69,16 @@
     {
       "id": "migration",
       "description": "Enter migration name",
-      "type": "promptString"
+      "type": "promptString",
     },
     {
       "id": "project",
       "description": "Enter project name",
-      "type": "promptString"
+      "type": "pickString",
+      "options": [
+        "BulkyWeb",
+        "BulkyWebRazor_Temp"
+      ]
     }
   ]
 }
